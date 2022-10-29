@@ -10,12 +10,17 @@ export const App = () => {
     // we send a request for this information from our content scripts
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       // we wait for the page to load, to prevent the user from opening the popup when the page is still loading
-      // causing the query to be done before products are on the page, leading to load and counting issues
-      chrome.tabs.onUpdated.addListener(function (tabId, info) {
+      // causing the query to be done before products are on the page, leading to load (function(details)
+      chrome.webNavigation.onCompleted.addListener(function (tabId, info) {
+        console.log(1)
         if (info.status === "complete") {
-          chrome.tabs.sendMessage(tabId, { type: "getAverage" }, function (response) {
+          chrome.tabs.sendMessage(
+            tabId,
+            { type: "getAverage" },
+            function (response) {
               setAverage(response.average);
-          });
+            }
+          );
         }
       });
     });

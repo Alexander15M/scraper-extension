@@ -15,7 +15,6 @@
   "scripts": {
     "start": "craco start",
     "build": "set \"INLINE_RUNTIME_CHUNK=false\" && craco build",
-    "test": "craco test",
     "zip": "npm run build && zip-build build extension -t %NAME%_%VERSION%_extension.%EXT%",
     "eject": "react-scripts eject"
   },
