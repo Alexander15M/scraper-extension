@@ -1,7 +1,14 @@
 # About
 
 This is code for a Chrome extension which scrapes prices on amazon.com search pages and shows an average of the prices in a chrome extension pop up.
-The pop up is made in React.
+The pop up is made in React. The extension assumes you are using Amazon US, with US Dollars as currency.
+
+## Installation and setup
+1. Run `npm install` to install the code required for the application
+1. Run `npm run zip` to build the application and make a zip file containing the code. This zip file will be saved to the `extension` folder.
+1. To install locally, you can unzip the file made in the previous step, and load uncompressed from the dev mode in Chrome.
+1. After installation, you can use the extension in any Amazon search results page.
+
 ## Available Scripts
 
 In the project directory, you can run:
