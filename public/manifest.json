@@ -16,5 +16,6 @@
         "default_icon": "logo192.png",
         "default_popup": "index.html",
         "default_title": "Price Averager popup"
-    }
+    },
+    "permissions": ["tabs","webNavigation"]
 }

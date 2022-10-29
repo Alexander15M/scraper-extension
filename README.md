@@ -38,3 +38,4 @@ Builds the app for production to the `build` folder, and then creates a zip file
 The extension was tested with the following terms:
 - Bluetooth headphones
 - Digital camera
+- Nuts snack packs
